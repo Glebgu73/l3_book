@@ -560,3 +560,145 @@ Processing by BooksController#update as HTML
 Redirected to http://test.host/books/980190962
 Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "books" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "books"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "books" ("title", "description", "author", "publishing_house", "production_year", "number_of_pages", "state", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 1, 1, 'downloaded', '2012-12-24 17:51:44', '2012-12-24 17:51:44', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "books" ("title", "description", "author", "publishing_house", "production_year", "number_of_pages", "state", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 1, 1, 'downloaded', '2012-12-24 17:51:44', '2012-12-24 17:51:44', 298486374)[0m
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "books" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mBook Load (1.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "books" 
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "description"=>"MyString", "number_of_pages"=>"1", "production_year"=>"1", "publishing_house"=>"MyString", "title"=>"MyString"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "number_of_pages", "production_year", "publishing_house", "state", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author", "MyString"], ["created_at", Mon, 24 Dec 2012 17:51:44 UTC +00:00], ["description", "MyString"], ["number_of_pages", 1], ["production_year", 1], ["publishing_house", "MyString"], ["state", "not_downloaded"], ["title", "MyString"], ["updated_at", Mon, 24 Dec 2012 17:51:44 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/980190963
+Completed 302 Found in 11ms (ActiveRecord: 2.5ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "books" 
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "books" 
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "books" [0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", "980190962"]]
+  Rendered books/_form.html.erb (13.3ms)
+Completed 200 OK in 96ms (Views: 94.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books" [0m
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (3.7ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mBook Load (0.6ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "description"=>"MyString", "number_of_pages"=>"1", "production_year"=>"1", "publishing_house"=>"MyString", "title"=>"MyString", "state"=>"downloaded"}, "id"=>"980190962"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books/980190962
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "books" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "books"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "books" ("title", "description", "author", "publishing_house", "production_year", "number_of_pages", "state", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 1, 1, 'downloaded', '2012-12-24 18:20:18', '2012-12-24 18:20:18', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "books" ("title", "description", "author", "publishing_house", "production_year", "number_of_pages", "state", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 1, 1, 'downloaded', '2012-12-24 18:20:18', '2012-12-24 18:20:18', 298486374)[0m
+  [1m[35m (10.7ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "books" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mBook Load (1.5ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books" 
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "description"=>"MyString", "number_of_pages"=>"1", "production_year"=>"1", "publishing_house"=>"MyString", "title"=>"MyString"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.8ms)[0m  INSERT INTO "books" ("author", "created_at", "description", "number_of_pages", "production_year", "publishing_house", "state", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["author", "MyString"], ["created_at", Mon, 24 Dec 2012 18:20:18 UTC +00:00], ["description", "MyString"], ["number_of_pages", 1], ["production_year", 1], ["publishing_house", "MyString"], ["state", "not_downloaded"], ["title", "MyString"], ["updated_at", Mon, 24 Dec 2012 18:20:18 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/980190963
+Completed 302 Found in 13ms (ActiveRecord: 3.2ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books" 
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "books" 
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "books" [0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", "980190962"]]
+  Rendered books/_form.html.erb (9.9ms)
+Completed 200 OK in 65ms (Views: 63.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" [0m
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (6.5ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", "980190962"]]
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "description"=>"MyString", "number_of_pages"=>"1", "production_year"=>"1", "publishing_house"=>"MyString", "title"=>"MyString", "state"=>"downloaded"}, "id"=>"980190962"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books/980190962
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m

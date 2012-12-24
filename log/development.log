@@ -9379,3 +9379,31 @@ Connecting to database specified by database.yml
   [1m[35m (41.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121224153053')
   [1m[36m (10.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121224120729')[0m
   [1m[35m (10.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121222164825')
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (224.1ms)[0m  DROP DATABASE IF EXISTS "project_test"
+  [1m[36m (883.7ms)[0m  [1mCREATE DATABASE "project_test" ENCODING = 'utf8'[0m
+  [1m[35m (126.8ms)[0m  CREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "description" character varying(255), "author" character varying(255), "publishing_house" character varying(255), "production_year" integer, "number_of_pages" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "state" character varying(255)) 
+  [1m[36m (9.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (73.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121224153053')
+  [1m[36m (10.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121224120729')[0m
+  [1m[35m (10.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121222164825')
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (229.8ms)[0m  DROP DATABASE IF EXISTS "project_test"
+  [1m[36m (650.4ms)[0m  [1mCREATE DATABASE "project_test" ENCODING = 'utf8'[0m
+  [1m[35m (146.1ms)[0m  CREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "description" character varying(255), "author" character varying(255), "publishing_house" character varying(255), "production_year" integer, "number_of_pages" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "state" character varying(255)) 
+  [1m[36m (9.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (84.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121224153053')
+  [1m[36m (10.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121224120729')[0m
+  [1m[35m (10.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121222164825')
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBooks (20121222164825)
+Migrating to AddState (20121224120729)
+Migrating to AddStates (20121224153053)
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
