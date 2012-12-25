@@ -9413,3 +9413,416 @@ Connecting to database specified by database.yml
 PG::Error: ERROR:  database "l3_book_test" is being accessed by other users
 DETAIL:  There are 1 other session(s) using the database.
 : DROP DATABASE IF EXISTS "l3_book_test"
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-25 11:46:14 +0400
+Connecting to database specified by database.yml
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (14.6ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 873ms (Views: 306.2ms | ActiveRecord: 469.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:16 +0400
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:16 +0400
+Served asset /jquery.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:16 +0400
+Served asset /books.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:16 +0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:16 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:16 +0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:16 +0400
+Served asset /books.js - 304 Not Modified (1ms)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2012-12-25 11:46:21 +0400
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mBook Load (35.5ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", "5"]]
+  Rendered books/_form.html.erb (10.3ms)
+  Rendered books/edit.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 80ms (Views: 41.4ms | ActiveRecord: 35.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:21 +0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:21 +0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:21 +0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:21 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:21 +0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:21 +0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:21 +0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started PUT "/books/5/change_state?book=delete" for 127.0.0.1 at 2012-12-25 11:46:22 +0400
+Processing by BooksController#change_state as HTML
+  Parameters: {"authenticity_token"=>"+bBfRYlk4EhFuBy66t8PgzL/5PABrXoZ78UV6/EXs8k=", "book"=>"delete", "book_id"=>"5"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mUPDATE "books" SET "state" = 'not_downloaded', "updated_at" = '2012-12-25 07:46:22.883523' WHERE "books"."id" = 5[0m
+  [1m[35m (12.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/books
+Completed 302 Found in 83ms (ActiveRecord: 14.1ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2012-12-25 11:46:22 +0400
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.6ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:23 +0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:23 +0400
+Served asset /books.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:23 +0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:23 +0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:23 +0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:23 +0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:23 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/books/5/edit" for 127.0.0.1 at 2012-12-25 11:46:24 +0400
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", "5"]]
+  Rendered books/_form.html.erb (5.3ms)
+  Rendered books/edit.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:24 +0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:24 +0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:24 +0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:24 +0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:24 +0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:24 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:24 +0400
+Served asset /application.js - 304 Not Modified (41ms)
+
+
+Started PUT "/books/5/change_state?book=download" for 127.0.0.1 at 2012-12-25 11:46:25 +0400
+Processing by BooksController#change_state as HTML
+  Parameters: {"authenticity_token"=>"+bBfRYlk4EhFuBy66t8PgzL/5PABrXoZ78UV6/EXs8k=", "book"=>"download", "book_id"=>"5"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mUPDATE "books" SET "state" = 'downloaded', "updated_at" = '2012-12-25 07:46:25.467346' WHERE "books"."id" = 5[0m
+  [1m[35m (26.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/books
+Completed 302 Found in 37ms (ActiveRecord: 28.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2012-12-25 11:46:25 +0400
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:25 +0400
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:25 +0400
+Served asset /books.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:25 +0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:25 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:25 +0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:25 +0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:25 +0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2012-12-25 11:46:27 +0400
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (6.4ms)
+  Rendered books/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:27 +0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:27 +0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:27 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:27 +0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:27 +0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:27 +0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:27 +0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2012-12-25 11:46:35 +0400
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+bBfRYlk4EhFuBy66t8PgzL/5PABrXoZ78UV6/EXs8k=", "book"=>{"title"=>"ыра", "description"=>"ыыовлд", "author"=>"вцолыа", "publishing_house"=>"вылдоа", "production_year"=>"23", "number_of_pages"=>"23432"}, "commit"=>"Create Book"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (47.9ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "description", "number_of_pages", "production_year", "publishing_house", "state", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "вцолыа"], ["created_at", Tue, 25 Dec 2012 07:46:35 UTC +00:00], ["description", "ыыовлд"], ["number_of_pages", 23432], ["production_year", 23], ["publishing_house", "вылдоа"], ["state", "not_downloaded"], ["title", "ыра"], ["updated_at", Tue, 25 Dec 2012 07:46:35 UTC +00:00]]
+  [1m[35m (48.5ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/books/6
+Completed 302 Found in 104ms (ActiveRecord: 96.7ms)
+
+
+Started GET "/books/6" for 127.0.0.1 at 2012-12-25 11:46:35 +0400
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  Rendered books/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:35 +0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:35 +0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:35 +0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:35 +0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:35 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:35 +0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:35 +0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2012-12-25 11:46:36 +0400
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.7ms)[0m  SELECT "books".* FROM "books" 
+  Rendered books/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:36 +0400
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:36 +0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:36 +0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:36 +0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:36 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:36 +0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:36 +0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/books/6/edit" for 127.0.0.1 at 2012-12-25 11:46:38 +0400
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  Rendered books/_form.html.erb (7.7ms)
+  Rendered books/edit.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:38 +0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:38 +0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:38 +0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:38 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:38 +0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:38 +0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:38 +0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/books/6/change_state?book=download" for 127.0.0.1 at 2012-12-25 11:46:39 +0400
+Processing by BooksController#change_state as HTML
+  Parameters: {"authenticity_token"=>"+bBfRYlk4EhFuBy66t8PgzL/5PABrXoZ78UV6/EXs8k=", "book"=>"download", "book_id"=>"6"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT 1  [["id", "6"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  UPDATE "books" SET "state" = 'downloaded', "updated_at" = '2012-12-25 07:46:39.864955' WHERE "books"."id" = 6
+  [1m[36m (19.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/books
+Completed 302 Found in 27ms (ActiveRecord: 21.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2012-12-25 11:46:39 +0400
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books" 
+  Rendered books/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:39 +0400
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:40 +0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:40 +0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:40 +0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:40 +0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-25 11:46:40 +0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-25 11:46:40 +0400
+Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+  [1m[36m (18.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (5020.1ms)[0m  DROP DATABASE IF EXISTS "l3_book_test"
+PG::Error: ERROR:  database "l3_book_test" is being accessed by other users
+DETAIL:  There are 1 other session(s) using the database.
+: DROP DATABASE IF EXISTS "l3_book_test"

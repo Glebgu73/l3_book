@@ -36,8 +36,8 @@
     <%= f.number_field :number_of_pages %>
   </div>
 	<% unless @book.new_record? %>
-	    <%= link_to 'downloaded', book_change_state_path(@book, book: :download), method: :put %> |
-	    <%= link_to 'not_downloaded', book_change_state_path(@book, book: :delete), method: :put %> 
+	    <%= link_to 'download', book_change_state_path(@book, book: :download), method: :put %> |
+	    <%= link_to 'delete', book_change_state_path(@book, book: :delete), method: :put %> 
 	  <% end %>
   <div class="actions">
     <%= f.submit %>

@@ -37,7 +37,7 @@
   </div>
 	<% unless @book.new_record? %>
 	    <%= link_to 'download', book_change_state_path(@book, book: :download), method: :put %> |
-	    <%= link_to 'delete', book_change_state_path(@book, book: :delete), method: :put %> 
+	    <%= link_to 'delete', book_change_state_path(@book, book: :del), method: :put %> 
 	  <% end %>
   <div class="actions">
     <%= f.submit %>
