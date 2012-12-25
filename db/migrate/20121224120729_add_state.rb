@@ -1,5 +1,5 @@
 class AddState < ActiveRecord::Migration
   def change
-	add_column :book, :state, :string
+	add_column :books, :state, :string
   end
 end
