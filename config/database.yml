@@ -14,7 +14,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: l3_book_pruduction
+  database: d971irjqfacu57
   pool: 5
   username: gnfomeguvefrec
   password: NEgwOvOVFGMTlNiBZviyDc2jc-
