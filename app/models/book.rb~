@@ -6,7 +6,7 @@ class Book < ActiveRecord::Base
       transition :not_downloaded  => :downloaded     
     end
 
-    event :delete do
+    event :del do
       transition :downloaded  => :not_downloaded 
     end
   end
