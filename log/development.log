@@ -9826,3 +9826,9 @@ Connecting to database specified by database.yml
 PG::Error: ERROR:  database "l3_book_test" is being accessed by other users
 DETAIL:  There are 1 other session(s) using the database.
 : DROP DATABASE IF EXISTS "l3_book_test"
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (5007.3ms)[0m  DROP DATABASE IF EXISTS "l3_book_test"
+PG::Error: ERROR:  database "l3_book_test" is being accessed by other users
+DETAIL:  There are 1 other session(s) using the database.
+: DROP DATABASE IF EXISTS "l3_book_test"
