@@ -11,3 +11,10 @@ test:
   database: l3_book_test
   pool: 5
   timeout: 5000
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: l3_book_pruduction
+  pool: 5
+  username:
+  password: 
